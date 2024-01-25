@@ -68,7 +68,7 @@ let package = Package(
         .target(
             name: "Connect",
             dependencies: [
-                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
             ],
             path: "Libraries/Connect",
             exclude: [
@@ -82,7 +82,7 @@ let package = Package(
             dependencies: [
                 "Connect",
                 "ConnectNIO",
-                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
             ],
             path: "Tests/ConformanceClient",
             exclude: [
@@ -96,7 +96,7 @@ let package = Package(
             dependencies: [
                 "Connect",
                 "ConnectMocks",
-                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
             ],
             path: "Tests/UnitTests/ConnectLibraryTests",
             exclude: [
@@ -110,7 +110,7 @@ let package = Package(
             name: "ConnectMocks",
             dependencies: [
                 .target(name: "Connect"),
-                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
             ],
             path: "Libraries/ConnectMocks",
             exclude: [
