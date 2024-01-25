@@ -60,7 +60,7 @@ let package = Package(
             from: "2.25.0"
         ),
         .package(
-            url: "https://github.com/apple/swift-protobuf.git",
+            url: "https://github.com/viktar-iosdev/swift-protobuf.git",
             from: "1.25.2"
         ),
     ],
@@ -68,7 +68,7 @@ let package = Package(
         .target(
             name: "Connect",
             dependencies: [
-                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
             ],
             path: "Libraries/Connect",
             exclude: [
@@ -82,7 +82,7 @@ let package = Package(
             dependencies: [
                 "Connect",
                 "ConnectNIO",
-                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
             ],
             path: "Tests/ConformanceClient",
             exclude: [
@@ -96,7 +96,7 @@ let package = Package(
             dependencies: [
                 "Connect",
                 "ConnectMocks",
-                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
             ],
             path: "Tests/UnitTests/ConnectLibraryTests",
             exclude: [
@@ -110,7 +110,7 @@ let package = Package(
             name: "ConnectMocks",
             dependencies: [
                 .target(name: "Connect"),
-                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
+                .product(name: "SwiftProtobuf1", package: "swift-protobuf"),
             ],
             path: "Libraries/ConnectMocks",
             exclude: [
